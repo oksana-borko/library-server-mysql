@@ -1,0 +1,20 @@
+{
+	"info": { "name": "Library", "_postman_id": "auto", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+	"item": [
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"url": "http://localhost:3500/api/books",
+				"header": [{ "key": "Content-Type", "value": "application/json" }],
+				"body": { "mode": "raw", "raw": "{\n  \"title\":\"1984\",\n  \"author\":\"Orwell\",\n  \"genre\":\"dystopia\"\n}" }
+			}
+		},
+		{ "name": "All Books", "request": { "method": "GET", "url": "http://localhost:3500/api/books" } },
+		{ "name": "Pickup Book", "request": { "method": "PATCH", "url": "http://localhost:3500/api/books/pickup?id={{BOOK_ID}}&reader=Alice" } },
+		{ "name": "Return Book", "request": { "method": "PATCH", "url": "http://localhost:3500/api/books/return?id={{BOOK_ID}}" } },
+		{ "name": "By Genre", "request": { "method": "GET", "url": "http://localhost:3500/api/books/genre?genre=dystopia" } },
+		{ "name": "By Genre & Status", "request": { "method": "GET", "url": "http://localhost:3500/api/books/gen_st?genre=dystopia&status=on%20stock" } },
+		{ "name": "Remove Book", "request": { "method": "DELETE", "url": "http://localhost:3500/api/books?id={{BOOK_ID}}" } }
+	]
+}

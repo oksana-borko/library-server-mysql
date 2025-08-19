@@ -1,0 +1,29 @@
+{
+  "name": "library-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "rimraf ./build && tsc && node ./build/src/app.js",
+    "dev": "tsx watch src/app.ts dev",
+    "test": "echo \"no tests\" && exit 0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.14.3",
+    "uuid": "^11.1.0",
+    "joi": "^18.0.0",
+    "mongoose": "^8.17.1"
+  },
+  "devDependencies": {
+    "@types/joi": "^17.2.2",
+    "@types/mongoose": "^5.11.96",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.0.14",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
